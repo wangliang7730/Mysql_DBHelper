@@ -36,6 +36,8 @@ private readonly static string _ProviderName = ConfigurationManager
 ```c#
 mysql使用
  DbHelper dbhelper =new DbHelper(DbConfig.ConnectionString, DbProviderName.MySqlClient);
+ System.Data.DataTable dt= dbhelper.GetDataTable("select * from table1",null);
+ //DBHelper的mysql访问类中有个bug当传null参数时报错，添加判断即可
  
 .net 使用
 DbHelper db = new DbHelper();
