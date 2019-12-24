@@ -220,7 +220,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType;
                             Cmd.CommandText = sql;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             Con.Open();
                             return Cmd.ExecuteNonQuery();
                         }
@@ -275,7 +276,8 @@ namespace Cat.Database
                         Con.ConnectionString = ConnectionString;
                         Cmd.CommandType = CommandType;
                         Cmd.CommandText = sql;
-                        Cmd.Parameters.AddRange(param);
+                        if(param!=null)
+                            Cmd.Parameters.AddRange(param);
                         Con.Open();
                         return Cmd.ExecuteReader(CommandBehavior.CloseConnection);
                     }
@@ -331,7 +333,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType;
                             Cmd.CommandText = sql;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             Con.Open();
                             return Cmd.ExecuteScalar();
                         }
@@ -402,7 +405,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType;
                             Cmd.CommandText = sql;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             Con.Open();
                             using (DbDataAdapter da = Factory.CreateDataAdapter())
                             {
@@ -470,7 +474,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType;
                             Cmd.CommandText = sql;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             Con.Open();
                             using (DbDataAdapter da = Factory.CreateDataAdapter())
                             {
@@ -541,7 +546,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType;
                             Cmd.CommandText = sql;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             Con.Open();
                             using (DbDataAdapter da = Factory.CreateDataAdapter())
                             {
@@ -612,7 +618,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType.StoredProcedure;
                             Cmd.CommandText = procName;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             Con.Open();
                             Cmd.ExecuteNonQuery();
                             return Cmd.Parameters;
@@ -669,7 +676,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType.StoredProcedure;
                             Cmd.CommandText = procName;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             using (DbDataAdapter da = Factory.CreateDataAdapter())
                             {
                                 da.SelectCommand = Cmd;
@@ -731,7 +739,8 @@ namespace Cat.Database
                             Con.ConnectionString = ConnectionString;
                             Cmd.CommandType = CommandType.StoredProcedure;
                             Cmd.CommandText = procName;
-                            Cmd.Parameters.AddRange(param);
+                            if(param!=null)
+                                Cmd.Parameters.AddRange(param);
                             using (DbDataAdapter da = Factory.CreateDataAdapter())
                             {
                                 da.SelectCommand = Cmd;
