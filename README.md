@@ -8,10 +8,10 @@ using Cat.Database;
 
 ```xml
 <connectionStrings>
-	<add name="ConnectionString" connectionString="server=.,1791;uid=xxx;pwd=xxx;database=pubs;trusted_connection=no;MultipleActiveResultSets=true;" providerName="System.Data.SqlClient"/>
+<!--	<add name="ConnectionString" connectionString="server=.,1791;uid=xxx;pwd=xxx;database=pubs;trusted_connection=no;MultipleActiveResultSets=true;" providerName="System.Data.SqlClient"/>-->
 	<!--<add name="ConnectionString" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=|DataDirectory|d_b.mdb" providerName="System.Data.OleDb"/>-->
 
-<!--    <add connectionString="server=127.0.0.1;database=mydb;uid=root;pwd=admin123" providerName=" MySql.Data.MySqlClient.MySqlClientFactory" name="mysqlconn" />-->
+    <add connectionString="server=127.0.0.1;database=mydb;uid=root;pwd=admin123" providerName=" MySql.Data.MySqlClient.MySqlClientFactory" name="mysqlconn" />
 
 </connectionStrings>
 
