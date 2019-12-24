@@ -26,8 +26,11 @@ using Cat.Database;
 ## Usage
 ```c#
 修改DBHelper静态字段
- private readonly static string _ConnectionString = ConfigurationManager.ConnectionStrings["mysqlconn"].ConnectionString;
-private readonly static string _ProviderName = ConfigurationManager.ConnectionStrings["mysqlconn"].ProviderName; 
+ private readonly static string _ConnectionString = ConfigurationManager
+ .ConnectionStrings["mysqlconn"].ConnectionString;
+private readonly static string _ProviderName = ConfigurationManager
+.ConnectionStrings["mysqlconn"].ProviderName; 
+
 ```
 
 ```c#
