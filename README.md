@@ -10,7 +10,17 @@ using Cat.Database;
 <connectionStrings>
 	<add name="ConnectionString" connectionString="server=.,1791;uid=xxx;pwd=xxx;database=pubs;trusted_connection=no;MultipleActiveResultSets=true;" providerName="System.Data.SqlClient"/>
 	<!--<add name="ConnectionString" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=|DataDirectory|d_b.mdb" providerName="System.Data.OleDb"/>-->
+
+<!--    <add connectionString="server=127.0.0.1;database=mydb;uid=root;pwd=admin123" providerName=" MySql.Data.MySqlClient.MySqlClientFactory" name="mysqlconn" />-->
+
 </connectionStrings>
+
+<system.data>
+<DbProviderFactories >
+<add name="MySQL Data Provider" invariant="MySql.Data.MySqlClient" description=".Net Framework Data Provider for MySQL" type="MySql.Data.MySqlClient.MySqlClientFactory, MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+</DbProviderFactories>
+</system.data>
+<!--修改Version=6.6.5.0对应的版本 C#引用mysql.data库-->
 ```
 
 ## Usage
