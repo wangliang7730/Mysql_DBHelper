@@ -34,6 +34,10 @@ private readonly static string _ProviderName = ConfigurationManager
 ```
 
 ```c#
+mysql使用
+ DbHelper dbhelper =new DbHelper(DbConfig.ConnectionString, DbProviderName.MySqlClient);
+ 
+.net 使用
 DbHelper db = new DbHelper();
 
 Repeater1.DataSource = db.GetDataTable("select * from [jobs]");
